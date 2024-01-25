@@ -140,7 +140,7 @@ router.get(
         console.log(response.data);
         console.log("proceed run !");
         res.redirect(
-          `http://localhost:3000/confirmation/${emailInput}/${userid}/${serverid}/${quantity}/${itemname}/${price}/${paymentid}`
+          `https://gosufamilystore.onrender.com/confirmation/${emailInput}/${userid}/${serverid}/${quantity}/${itemname}/${price}/${paymentid}`
         );
       })
       .catch((error) => {
@@ -282,7 +282,7 @@ router.get(
     sendMessage(data)
       .then(function (response) {
         res.redirect(
-          `http://localhost:3000/confirmation/${email}/${playerid}/${serverid}/${quantity}/${itemname}/${price}/${orderid}`
+          `https://gosufamilystore.onrender.com/confirmation/${email}/${playerid}/${serverid}/${quantity}/${itemname}/${price}/${orderid}`
         );
         console.log("Message sent!");
         return;
@@ -477,7 +477,7 @@ router.get('/create-order/:userid/:serverid/:itemid/:quantity/:price/:itemname/:
     }else{
       console.log("Order Created", response.data);
       res.send("order created!")
-      // res.redirect(`http://localhost:3000/confirmation/${email}/${userid}/${serverid}/${quantity}/${itemname}/${price}/${paymentid}`)
+      // res.redirect(`https://gosufamilystore.onrender.com/confirmation/${email}/${userid}/${serverid}/${quantity}/${itemname}/${price}/${paymentid}`)
     } 
 
   } catch (error) {
