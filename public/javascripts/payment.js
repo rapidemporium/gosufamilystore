@@ -88,7 +88,7 @@ document.getElementById("rzp-button2").onclick = async function (e) {
   var amtItem = (strToNumber + 0.026).toFixed(2);
 
   let response = await fetch(
-    "http://localhost:3000/payment",
+    "https://gosufamilystore.onrender.com/payment",
     {
       method: "POST",
       headers: {
@@ -112,10 +112,10 @@ document.getElementById("rzp-button2").onclick = async function (e) {
     handler: async function (response) {
       order_id = response.razorpay_order_id;
       console.log(order_id)
-      window.location.href = `http://localhost:3000/proceed/${userid}/${serverid}/${itemid}/${productQuantity}/${price}/${itemname}/${emailInput}/${response.razorpay_order_id}`;
+      window.location.href = `https://gosufamilystore.onrender.com/proceed/${userid}/${serverid}/${itemid}/${productQuantity}/${price}/${itemname}/${emailInput}/${response.razorpay_order_id}`;
 
       $.ajax({
-        url: "http://localhost:3000/pay-verify",
+        url: "https://gosufamilystore.onrender.com/pay-verify",
         type: "POST",
         data: {
           razorpay_order_id: response.razorpay_order_id,
@@ -155,7 +155,7 @@ whatsappBtn.onclick = async function (e) {
   var amtItem = (strToNumber + 0.026).toFixed(2);
 
   let response = await fetch(
-    "http://localhost:3000/payment",
+    "https://gosufamilystore.onrender.com/payment",
     {
       method: "POST",
       headers: {
@@ -177,10 +177,10 @@ whatsappBtn.onclick = async function (e) {
 
     order_id: orderData.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     handler: async function (response) {
-      window.location.href = `http://localhost:3000/send/${userid}/${serverid}/${itemid}/${itemname}/${price}/${response.razorpay_order_id}/${dateFormat}/${formattedTime}/${productQuantity}/${emailInput}`;
+      window.location.href = `https://gosufamilystore.onrender.com/send/${userid}/${serverid}/${itemid}/${itemname}/${price}/${response.razorpay_order_id}/${dateFormat}/${formattedTime}/${productQuantity}/${emailInput}`;
 
       $.ajax({
-        url: "http://localhost:3000/pay-verify",
+        url: "https://gosufamilystore.onrender.com/pay-verify",
         type: "POST",
         data: {
           razorpay_order_id: response.razorpay_order_id,
