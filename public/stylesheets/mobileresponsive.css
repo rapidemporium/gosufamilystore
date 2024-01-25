@@ -1,0 +1,533 @@
+@media only screen and (max-width: 600px) {
+  #notUserMsg{
+    font-size: 4vw !important;
+  }
+  .check-out {
+    width: 100%;
+    height: 30vw !important;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+  input {
+    border-radius: 500px;
+    padding: 6px 30px 6px 30px;
+    border: 1px solid #00000049 !important;
+    width: 90vw;
+    margin-top: 0.5vh !important;
+    height: 13vw;
+  }
+
+  .mobile-desk{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .last {
+    position: relative;
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    margin-top: -8vh;
+    overflow: auto;
+    z-index: 1;
+    border-top: 1px solid #00000027;
+    box-shadow: 1px 1px 5px #00000027;
+  }
+  .box {
+    width: 100% !important;
+    min-height: 80vh !important;
+    border-radius: 0px !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .item-card {
+    width: 42vw !important;
+    font-size: 2.8vw;
+  }
+  .item-card:hover {
+    border: 1px solid green;
+  }
+  .list-products {
+    padding-bottom: 20vw;
+    height: 85vw;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  body {
+    overflow: auto;
+  }
+  .first-part {
+    height: 70vh;
+    position: relative;
+    top: -20vh;
+  }
+  .form-container {
+    margin-top: 0vw;
+
+    display: flex;
+    font-size: 4.5vw;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100% !important;
+    min-height: 75vh;
+
+    align-items: start;
+  }
+  label {
+    font-weight: 500;
+    color: #000;
+    font-size: 4.2vw;
+    margin-left: 0.5vw;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .text {
+    font-weight: 500;
+    font-size: 5.5vw;
+    margin-top: -2vh;
+  }
+  .price {
+    width: 85vw;
+    font-size: 5.8vw;
+  }
+
+  form {
+    width: 100%;
+    position: relative;
+
+    background: #dc3545;
+  }
+
+  .clear {
+    color: rgba(255, 0, 0, 0.692);
+    font-size: 4.3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 7vw;
+    position: relative;
+    margin-left: 10px;
+    margin-top: -1vh;
+    margin-bottom: 2vh;
+    /* gap: 48px; */
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+  /* #warn {
+    color: red;
+    position: relative;
+    top: 0vh;
+    display: none;
+    background: transparent;
+    left: 4vw;
+    font-size: 4vw;
+  } */
+  #warn {
+    color: #fff;
+    position: relative;
+    top: 0vh;
+    display: none;
+    background: transparent;
+    left: 4vw;
+    font-size: 4vw;
+    background-color: red;
+    padding: 0px 10px 0px 10px;
+    border-radius: 500px;
+}
+  #payErr {
+    color: red;
+    position: absolute;
+    left: 9vw;
+    top: 23vh;
+    display: none;
+    font-size: 4vw;
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: -2vw;
+    z-index: 2;
+    height: 6vh;
+  }
+  .counter input {
+    width: 70px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 20px 5px 20px;
+    background: orange;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+    height: 36px;
+    font-size: 3.5vw;
+  }
+  .counter span {
+    display: block;
+    font-size: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: orange;
+
+    user-select: none;
+  }
+  .itemButtons {
+    width: 100%;
+    height: 25%;
+    margin-top: 0;
+    margin-left: 0;
+    border: none;
+    background-color: lime;
+    color: #fff;
+    border-radius: 500px;
+    cursor: pointer;
+    font-size: 4vw !important;
+  }
+  .screen-size {
+    display: initial;
+  }
+  .fullScreen {
+    display: initial;
+    font-size: 5vw;
+    margin-left: 90%;
+    cursor: pointer;
+  }
+  .halfScreen {
+    display: none;
+    font-size: 5vw;
+    margin-left: 90%;
+    cursor: pointer;
+  }
+  .btn-secondary {
+    width: 25vw;
+    height: 10vw;
+    font-size: 3vw !important;
+  }
+  #mlbb-playername {
+    outline: none;
+    border: none !important;
+    color: green;
+    width: 55%;
+    font-size: 4.4vw;
+    padding: 1px 4px 1px 4px;
+  }
+  #mlbb-playerid {
+    outline: none;
+    border: none !important;
+    color: green;
+    font-size: 4.4vw;
+    width: 55%;
+    padding: 1px 4px 1px 4px;
+  }
+  .isVerify {
+    color: green;
+    display: none;
+    font-size: 4.5vw;
+  }
+  #choosed {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  #notUserMsg{
+    font-size: 4vw !important;
+  }
+  .last {
+    position: relative;
+    display: initial;
+    width: 100%;
+    background-color: #fff;
+    margin-top: -8vh;
+    overflow: auto;
+    z-index: 1;
+    border-top: 1px solid #00000027;
+    box-shadow: 1px 1px 5px #00000027;
+  }
+  .heading {
+    font-size: 4.5vw;
+  }
+  .item-card:hover {
+    border: 1px solid green;
+  }
+  .item-card {
+    width: 45vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    font-size: 2.5vw !important;
+    margin-top: 1.2vh;
+    margin-left: -1vw;
+    font-weight: 500;
+    border: 1px solid orange;
+    box-shadow: 1px 1px 5px #0000001f;
+    cursor: pointer;
+    color: #000000a6;
+    border-radius: 500px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  }
+  .icc > i {
+    color: gray;
+    font-size: 4.5vw;
+  }
+  .box {
+    width: 100% !important;
+    min-height: 80vh !important;
+    border-radius: 0px !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .list-products {
+    padding-bottom: 30vw !important;
+    height: 85vw;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  body {
+    overflow: auto;
+  }
+  .first-part {
+    height: 70vh;
+    position: relative;
+    top: -20vh;
+  }
+  .form-container {
+    margin-top: 0vw;
+
+    display: flex;
+    font-size: 4.5vw;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100% !important;
+    min-height: 75vh;
+
+    align-items: start;
+  }
+  label {
+    font-weight: 500;
+    color: #000;
+    font-size: 3.5vw;
+    margin-left: 0.5vw;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .text {
+    font-weight: 500;
+    font-size: 3.5vw;
+    margin-top: -2vh;
+  }
+  .price {
+    width: 85vw;
+    font-size: 4vw;
+  }
+
+  form {
+    width: 100%;
+    position: relative;
+
+    background: #dc3545;
+  }
+
+  .clear {
+    color: rgba(255, 0, 0, 0.692);
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 7vw;
+    position: relative;
+    margin-left: 10px;
+    margin-top: -1vh;
+    margin-bottom: 2vh;
+
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+  /* #warn {
+    color: red;
+    position: relative;
+    top: 0vh;
+    display: none;
+    background: transparent;
+    left: 4vw;
+    font-size: 4vw;
+  } */
+  #warn {
+    color: #fff;
+    position: relative;
+    top: 0vh;
+    display: none;
+    background: transparent;
+    left: 4vw;
+    font-size: 4vw;
+    background-color: red;
+    padding: 0px 10px 0px 10px;
+    border-radius: 500px;
+}
+  #payErr {
+    color: red;
+    position: absolute;
+    left: 9vw;
+    top: 23vh;
+    display: none;
+    font-size: 4vw;
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+    height: 6vh;
+  }
+  .counter input {
+    width: 150px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 20px 5px 20px;
+    background: orange;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+    height: 70px;
+    font-size: 3.5vw;
+  }
+  .counter span {
+    display: block;
+    font-size: 50px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: orange;
+
+    user-select: none;
+  }
+  .itemButtons {
+    width: 100%;
+    height: 25%;
+    margin-top: 0;
+    margin-left: 0;
+    border: none;
+    background-color: lime;
+    color: #fff;
+    border-radius: 500px;
+    cursor: pointer;
+    font-size: 4vw !important;
+  }
+  .screen-size {
+    display: initial;
+  }
+  .fullScreen {
+    display: initial;
+    font-size: 5vw;
+    margin-left: 90%;
+    cursor: pointer;
+  }
+  .halfScreen {
+    display: none;
+    font-size: 5vw;
+    margin-left: 90%;
+    cursor: pointer;
+  }
+  .btn-secondary {
+    width: 25vw;
+    height: 10vw;
+    font-size: 3vw !important;
+  }
+  #mlbb-playername {
+    outline: none;
+    border: none !important;
+    color: green;
+    width: 55%;
+    font-size: 4.4vw;
+    padding: 1px 4px 1px 4px;
+  }
+  #mlbb-playerid {
+    outline: none;
+    border: none !important;
+    color: green;
+    font-size: 4.4vw;
+    width: 55%;
+    padding: 1px 4px 1px 4px;
+  }
+  .isVerify {
+    color: green;
+    display: none;
+    font-size: 4.5vw;
+  }
+  #choosed {
+    font-size: 4vw;
+  }
+  .check-out {
+    width: 100%;
+    height: 30vw !important;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+  input {
+    border-radius: 500px;
+    padding: 6px 30px 6px 30px;
+    border: 1px solid #00000049 !important;
+    width: 90vw;
+    font-size: 3.5vw;
+    margin-top: 0.5vh !important;
+    height: 10vw;
+  }
+  .icc > i {
+    color: gray;
+    font-size: 4.5vw;
+  }
+}

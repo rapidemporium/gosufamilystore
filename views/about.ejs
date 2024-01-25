@@ -1,0 +1,125 @@
+<%- include('./partials/sider.ejs') %>
+<style>
+  .card::-webkit-scrollbar {
+    display: none;
+  }
+  .card {
+    max-width: 80%;
+    background-color: white;
+    border: 1px solid orange;
+    box-shadow: 1px 1px 5px rgba(255, 255, 0, 0.87);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* adjust as needed */
+  }
+  #aboutTxt {
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  p {
+    font-size: 1.3vw;
+    text-align: center;
+  }
+
+  .template {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 85%;
+    height: 90%;
+    overflow: hidden;
+  }
+  .first-img {
+    width: 22vw;
+    height: 22vw;
+    left: 79%;
+    top: 60%;
+    position: absolute;
+  }
+  .second-img {
+    width: 15vw;
+    height: 15vw;
+    left: 5%;
+    top: 0%;
+    position: absolute;
+  }
+  .first-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .second-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<div class="template">
+  <!-- <div class="first-img">
+    <img
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCMQKaVGIrGoJZxpqh91FQjhup_GhnvdKmWMe3g8ksRPJbS0b3KYXcLfs8iexsZSDgm4q7nxiZUyt3UWb8jj8j-67JSpzeE10KgAJdio3oEvxOK501FertXXKhtuQXPs27uWg72euPoXrsHiJaU_tZMveOqrYUce3OqtVoIKCpyfmywoLe-QL5K93iNw/s1792/alucard-png-mobile-legends-.jpg"
+      alt=""
+    />
+  </div> -->
+  <!-- <div class="second-img">
+    <img src="https://pbs.twimg.com/media/Fgb9InAXwAMWr0B.png" alt="" />
+  </div> -->
+  <div class="card">
+    <h3 id="aboutTxt">About Us</h3>
+    <p>
+      Welcome to Gosu Family Store, your ultimate haven for mobile legends
+      gaming essentials at unbeatable prices. We pride ourselves on being the
+      go-to destination for gaming enthusiasts, offering a curated collection
+      that enhances your gaming experience without breaking the bank.<br /><br />
+
+      At Gosu Family Store, we believe in providing top-notch gear for every
+      gamer, from seasoned pros to casual players. Our commitment to quality
+      products at discounted rates is driven by the understanding that gaming is
+      more than a hobby; it's a lifestyle.<br /><br />
+
+      What sets us apart is not just our affordable prices but also our
+      unwavering dedication to customer satisfaction. Our team consists of avid
+      gamers who know the importance of reliable equipment, ensuring a seamless
+      shopping experience for you. Explore our wide range of gaming items
+      tailored to elevate your performance in Mobile Legends.<br /><br />
+
+      Join our community of gamers who have experienced the thrill of victory
+      with our affordable and high-quality gaming essentials. At Gosu Family
+      Store, we're not just a store; we're your gaming companion, devoted to
+      fueling your passion for Mobile Legends. Game on!
+    </p>
+  </div>
+</div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/657e7f4570c9f2407f80b1fc/1hhr22aqa";
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->

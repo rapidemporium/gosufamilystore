@@ -1,0 +1,117 @@
+{
+  "Product_Name": "Mobile Legends",
+  "Image_URL": "https://cdn.moogold.com/2019/11/mobile-legends-bang-bang.jpg",
+  "Variation": [                                              
+    {
+      "variation_name": "7502 Diamonds 💎",
+      "variation_id": 4690782,
+      "variation_price": 10000
+    },
+    {
+      "variation_name": "6042 Diamonds 💎",
+      "variation_id": 4700161,
+      "variation_price": 7700
+    },
+    {
+      "variation_name": "2976 Diamonds 💎",
+      "variation_id": 4690781,
+      "variation_price": 3950
+    },
+    {
+      "variation_name": "2398 Diamonds 💎",
+      "variation_id": 4700160,
+      "variation_price": 3200
+    },
+    {
+      "variation_name": "1446 Diamonds 💎",
+      "variation_id": 4690780,
+      "variation_price": 2000
+    },
+    {
+      "variation_name": "1163 Diamonds 💎",
+      "variation_id": 4700158,
+      "variation_price": 1570
+    },
+    {
+      "variation_name": "716 Diamonds 💎",
+      "variation_id": 4690779,
+      "variation_price": 1000
+    },
+    {
+      "variation_name": "570 Diamonds 💎",
+      "variation_id": 4700157,
+      "variation_price": 800
+    },
+    {
+      "variation_name": "429 Diamonds 💎",
+      "variation_id": 4690778,
+      "variation_price": 610
+    },
+    {
+      "variation_name": "355 Diamonds 💎",
+      "variation_id": 4690777,
+      "variation_price": 520
+    },
+    {
+      "variation_name": "336 Diamonds 💎",
+      "variation_id": 4700155,
+      "variation_price": 470
+    },
+    {
+      "variation_name": "284 Diamonds 💎",
+      "variation_id": 4690776,
+      "variation_price": 415
+    },
+    {
+      "variation_name": "223 Diamonds 💎",
+      "variation_id": 4700153,
+      "variation_price": 223
+    },
+    {
+      "variation_name": "140 Diamonds 💎",
+      "variation_id": 4690775,
+      "variation_price": 215
+    },
+    {
+      "variation_name": "112 Diamonds 💎",
+      "variation_id": 4700152,
+      "variation_price": 170
+    },
+    {
+      "variation_name": "70 Diamonds 💎",
+      "variation_id": 4690774,
+      "variation_price": 105
+    },
+    {
+      "variation_name": "56 Diamonds 💎",
+      "variation_id": 4700149,
+      "variation_price": 90
+    },
+    {
+      "variation_name": "42 Diamonds 💎",
+      "variation_id": 4690772,
+      "variation_price": 70
+    },
+    {
+      "variation_name": "22 Diamonds 💎",
+      "variation_id": 4700148,
+      "variation_price": 40
+    },
+    {
+      "variation_name": "14 Diamonds 💎",
+      "variation_id": 4690759,
+      "variation_price": 30
+    },
+    {
+      "variation_name": "11 Diamonds 💎",
+      "variation_id": 4700134,
+      "variation_price": 20
+    },
+    {
+      "variation_name": "5 Diamonds 💎",
+      "variation_id": 578634,
+      "variation_price": 11
+    }
+  ],
+  "fields": ["User ID", "Server ID"]
+}

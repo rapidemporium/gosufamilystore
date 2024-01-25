@@ -1,0 +1,346 @@
+<title>MLBB: Beta Pack</title>
+<%- include('./partials/sider.ejs') %>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/mobileresponsive.css">
+<style>
+  .item-card{
+    font-size: 1.2vw;
+  }
+  @media only screen and (max-width: 600px) {
+    .item-card {
+    width: 42vw !important;
+    font-size: 2.8vw !important;
+    /* background: red; */
+}
+  }
+
+</style>
+<!--Screen Loader-->
+<div id="preventTouching">
+  <div class="loader">
+    <div class="circle">
+      <div class="dot"></div>
+      <div class="outline"></div>
+    </div>
+    <div class="circle">
+      <div class="dot"></div>
+      <div class="outline"></div>
+    </div>
+    <div class="circle">
+      <div class="dot"></div>
+      <div class="outline"></div>
+    </div>
+    <div class="circle">
+      <div class="dot"></div>
+      <div class="outline"></div>
+    </div>
+  </div>
+  <div class="alertText">DO NOT PRESS ANY BUTTON</div>
+</div>
+ <!-- modal  -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Player Varification</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="verify-err"> </div>
+
+          <div class="info">
+         <div class="vone">
+            <label for="player-name">Player Name</label>
+            <input type="text" value="" readonly id="mlbb-playername"> <br>
+         </div>
+         <div class="vtwo">
+            <label for="player-id">Player Id</label>
+            <input type="text" value="" readonly id="mlbb-playerid">
+         </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="isVerify">Player Verified</div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="hero-container">
+    <div class="last">
+      <div class="screen-size">
+        <i class="ri-fullscreen-fill fullScreen"></i>
+        <i class="ri-fullscreen-exit-fill halfScreen"></i>
+      </div>
+        <!-- <div class="box">
+          <div class="heading">Order Summary</div>
+          <div class="check-out">
+            <div class="price">
+              <div class="clear"><i class="ri-close-line"></i> Clear</div>
+              <div class="text">Choosed Plan: <span id="choosed">0</span></div>
+              <div class="amt"><div class="sym">₹</div><div class="rs" id="rupee">0</div></div>
+            </div>
+
+              <span id="notUserMsg" style="color: red; font-size: 1.2vw; font-weight: bold;"><%= notUserMessage %></span>
+
+
+          </div>
+
+          <span id="warn">Enter details first, please</span>
+          <span id="payErr">Please select your pack</span>
+
+
+        <div class="form-container" id="playerVerificationForm">
+            <form method="post" action="/player-varification">
+              <div class="mb-3">
+                <label for="exampleInputEmail1">User ID <span></span></label>
+                <input type="number" name="userid" placeholder="E.g. 123456789" maxlength="10"  id="exampleInputEmail1" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1">Server ID <span></span></label>
+                <input type="number" name="serverid" placeholder="E.g. 4567" maxlength="5" id="exampleInputPassword1" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1">Email ID <span></span></label>
+                <input type="email" name="email" placeholder="example@mail.com" id="inputEmail" required>
+              </div>
+
+
+            </form>
+
+
+
+            <div class="buttons">
+
+
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" id="rzp-button1" class="btn itemButtons">Verify</button>
+              <button data-final=""  id="smileoneButton" class="btn itemButtons">Buy Now</button>
+              <button data-final="" id="smilewhatsappBtn" class="itemButtons">Buy Via Whatapp</button>
+
+            </div>
+          </div>
+
+
+        </div> -->
+    </div>
+
+  <div class="first-part">
+  <div class="ad-banner">
+ <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="30"
+centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+<swiper-slide><img src="/images/banner-1.webp" alt=""></swiper-slide>
+<swiper-slide><img src="/images/banner-2.webp" alt=""></swiper-slide>
+<swiper-slide><img src="/images/banner-3.webp" alt=""></swiper-slide>
+<swiper-slide><img src="/images/banner-4.webp" alt=""></swiper-slide>
+</swiper-container>
+        </div>
+
+        <div class="products">
+            <div class="heading" style="padding-bottom: 10px;">Mobile Legends: Beta</div>
+            <div class="list-products" style="overflow: auto;">
+
+              <% mobileLegendList.forEach((legend) => { %>
+
+                  <div class="item-card" item_name="<%=legend.spu%>" item_id="<%=legend.id%>"  data_price="<%= legend.price %>" ><%=legend.spu%></div>
+
+                <% }); %>
+
+                <div class="help-desk">
+                  <div class="mobile-desk">
+                    <div class="heading">Order Summary</div>
+                    <div class="check-out">
+                      <div class="price">
+                        <div class="clear"><i class="ri-close-line"></i> Clear</div>
+                        <div class="text">Choosed Plan: <span id="choosed">0</span></div>
+                        <div class="amt"><div class="sym">₹</div><div class="rs" id="rupee">0</div></div>
+                      </div>
+                
+                        <span id="notUserMsg" style="color: red; font-size: 1.2vw; font-weight: bold;"><%= notUserMessage %></span>
+                  
+                      
+                    </div>
+          
+                    <span id="warn">Enter details first, please</span>
+                    <span id="payErr">Please select your pack</span>
+          
+              
+                  <div class="form-container" id="playerVerificationForm">
+                      <form method="post" action="/player-varification">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1">User ID <span></span></label>
+                          <input type="number" name="userid" placeholder="E.g. 123456789" maxlength="10"  id="exampleInputEmail1" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1">Server ID <span></span></label>
+                          <input type="number" name="serverid" placeholder="E.g. 4567" maxlength="5" id="exampleInputPassword1" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1">Email ID <span></span></label>
+                          <input type="email" name="email" placeholder="example@mail.com" id="inputEmail" required>
+                        </div>
+ 
+                      </form>
+
+                      <div class="buttons">
+                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" id="rzp-button1" class="btn itemButtons">Verify</button>
+                        <button data-final=""  id="smileoneButton" class="btn itemButtons purchaseButton">Buy Now</button>
+                        <button data-final="" id="smilewhatsappBtn" class="itemButtons purchaseButton">Buy Via Whatapp</button>
+                      </div>
+                    </div>
+          
+                  </div>
+                  <h6 style="color: red; font-size: small;">Kindly check your player ID and server ID before proceeding with payment to prevent any potential delays. Thank you for your cooperation.</h6>
+                  <h4>How to purchase Mobile Legends Top-up in Gosu family store.</h4>
+                  <div class="steps">
+                    <ol>
+                      <li>
+                          <strong>Step 1:</strong> Fill in your information, including Player ID, Server ID, and email – all mandatory fields. You must complete this step before choosing any items.
+                      </li>
+                      <li>
+                          <strong>Step 2:</strong> Select your desired pack/item.
+                      </li>
+                      <li>
+                          <strong>Step 3 (Optional):</strong> Verify your player and player ID to check your information.
+                      </li>
+                      <li>
+                          <strong>Step 4:</strong> Click on "Buy Now" or "Buy via WhatsApp" to successfully purchase your item. Once payment is made, the diamonds you've purchased will be credited to your account within 30 minutes.
+                      </li>
+                  </ol>
+
+                  <h5>Important Information.</h5>
+                  <ul>
+                    <li class="bl">Enter your UID and Server ID correctly to avoid delays in diamond top-up.</li>
+                    <li class="bl">If you have not received diamonds in your account after payment, please contact us via email <b>sharman2727@gmail.com</b> with your order details received on your registered email.</li>
+                </ul>
+
+                <h5>Why Gosu Family Store.</h5>
+                <ul>
+                  <li class="bl">Enjoy the convenience of shopping without the hassle of login/register processes.</li>
+                  <li class="bl"> Our dedicated support team is ready around the clock to assist you with any queries or concerns.</li>
+                  <li class="bl"> Multiple payment options.</li>
+              </ul>
+                  </div>
+                  <table class="customTable">
+                    <thead>
+                      <tr>
+                        <th>Bonous Diamonds</th>
+                        <th>Total Diamonds</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>78 + 8 Diamonds</td>
+                        <td>86 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>156 + 16 Diamonds</td>
+                        <td>172 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>234 + 23 Diamonds</td>
+                        <td>257 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>625 + 81 Diamonds</td>
+                        <td>706 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>1860 + 335 Diamonds</td>
+                        <td>2195 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>3099 + 589 Diamonds</td>
+                        <td>3688 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>4649 + 883 Diamonds</td>
+                        <td>5532 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>7740 + 1548 Diamonds</td>
+                        <td>9288 Diamonds</td>
+                      </tr>
+                      <tr>
+                        <td>...</td>
+                        <td>...</td>
+                      </tr>
+                      <tr>
+                        <td>...</td>
+                        <td>...</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- Generated at CSSPortal.com -->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/657e7f4570c9f2407f80b1fc/1hhr22aqa';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+
+  var whatsappBtn = document.getElementById("smilewhatsappBtn");
+  var buyButton = document.getElementById("smileoneButton");
+
+  buyButton.addEventListener("click", function () {
+  if (
+    serverIdInput.value.length !== 0 &&
+    userIdInput.value.length !== 0 &&
+    rs.innerHTML !== "0" &&
+    inputEmail.value.length !== 0
+  ) {
+    preventTouching.style.display = "flex";
+  } else {
+    warn.style.display = "initial";
+  }
+});
+
+whatsappBtn.addEventListener("click", function () {
+  if (
+    serverIdInput.value.length !== 0 &&
+    userIdInput.value.length !== 0 &&
+    rs.innerHTML !== "0" &&
+    inputEmail.value.length !== 0
+  ) {
+    preventTouching.style.display = "flex";
+    console.log(preventTouching)
+  } else {
+    warn.style.display = "initial";
+  }
+});
+
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script src="/javascripts/smilePayment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<!-- <script src="/javascripts/payment.js"></script> -->
+<script src="/javascripts/script.js"></script>
+<script src="/javascripts/playerapi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+

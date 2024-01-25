@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- modal  -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="verify-err"></div>
+
+            <div class="info">
+              <label for="player-name">Player Name</label>
+              <input type="text" value="" readonly id="mlbb-playername" />
+              <br />
+              <label for="player-id">Player Id</label>
+              <input type="text" value="" readonly id="mlbb-playerid" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="isVerify">Player Verified</div>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="root">
+      <!-- Nav bar  -->
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <span>Name</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="main">
+        <div class="left">
+          <div class="image-frame">
+            <img
+              src="https://i0.wp.com/radientofficial.com/wp-content/uploads/2023/04/f0a53-unnamed-1.png?fit=512%2C512&ssl=1"
+              class="img-fluid"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="right">
+          <div class="card">
+            <div class="head"><h1>Mlbb: Special</h1></div>
+            <div class="sub-head"><h4>Daimonds:</h4></div>
+            <div class="items">
+              <% let counter = 0; %> <%
+              mobileLegendList.reverse().forEach((legend) => { %> <% if (counter
+              < 22){ %>
+              <div
+                class="item-card"
+                item_name="<%=legend.variation_name%>"
+                item_id="<%=legend.variation_id%>"
+                data_price="<%= legend.variation_price %>"
+              >
+                <%=legend.variation_name%>
+              </div>
+              <% counter++; %> <% }; %> <% }); %>
+            </div>
+          </div>
+
+          <div class="cart">
+            <h5>0</h5>
+          </div>
+
+          <div class="wrapper">
+            <div class="price">
+              <div class="clear"><i class="ri-close-line"></i> Clear</div>
+              <div class="text">Choosed Plan: <span id="choosed">0</span></div>
+              <div class="amt">
+                <div class="sym">₹</div>
+                <div class="rs" id="rupee">0</div>
+              </div>
+            </div>
+          </div>
+          <span id="warn">Please fill the form before selecting daimonds</span>
+          <span id="payErr">Please Select the pack to proceed further</span>
+
+          <!-- input form  -->
+          <div class="form-container" id="playerVerificationForm">
+            <form method="post" action="/player-varification">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >User ID <span>Enter your User ID</span></label
+                >
+                <input
+                  type="number"
+                  name="userid"
+                  placeholder="E.g. 123456789"
+                  maxlength="10"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Server ID <span>Enter your Server ID</span></label
+                >
+                <input
+                  type="number"
+                  name="serverid"
+                  placeholder="E.g. 4567"
+                  maxlength="5"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  required
+                />
+              </div>
+              <!-- <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Selected Item<span></span></label>
+              <input type="text" name="itemid" user-item="" class="form-control" id="productID" required readonly>
+            </div> -->
+              <!-- <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Email <span>Enter your Email</span></label>
+              <input type="email" name="email" placeholder="example@gmail.com" class="form-control" id="exampleInputPassword2" required>
+            </div> -->
+            </form>
+
+            <!-- Quantity Counter -->
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" value="1" id="quantityCounter" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
+            </div>
+
+            <div class="buttons">
+              <!-- <button type="" id="addtocart" class="btn">Add to Cart</button> -->
+              <button
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                id="rzp-button1"
+                class="btn"
+              >
+                Verify
+              </button>
+              <button data-final="" id="rzp-button2" class="btn">
+                Buy Now
+              </button>
+              <button data-final="" id="whatsappBtn">Buy Via Whatapp</button>
+            </div>
+          </div>
+          <div id="playerInfo"></div>
+        </div>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="/javascripts/payment.js"></script>
+    <script src="/javascripts/script.js"></script>
+    <script src="/javascripts/playerapi.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

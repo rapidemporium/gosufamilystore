@@ -1,0 +1,68 @@
+{
+  "status": 200,
+  "message": "success",
+  "data": {
+    "product": [
+      {
+        "id": "13",
+        "spu": "86 Diamonds 💎",
+        "price": "120",
+        "cost_price": "120"
+      },
+      {
+        "id": "23",
+        "spu": "172 Diamonds 💎",
+        "price": "240",
+        "cost_price": "240"
+      },
+      {
+        "id": "25",
+        "spu": "257 Diamonds 💎",
+        "price": "345",
+        "cost_price": "345"
+      },
+      {
+        "id": "26",
+        "spu": "706 Diamonds 💎",
+        "price": "950",
+        "cost_price": "950"
+      },
+      {
+        "id": "27",
+        "spu": "2195 Diamonds 💎",
+        "price": "2880",
+        "cost_price": "2880"
+      },
+      {
+        "id": "28",
+        "spu": "3688 Diamonds 💎",
+        "price": "4830",
+        "cost_price": "4830"
+      },
+      {
+        "id": "29",
+        "spu": "5532 Diamonds 💎",
+        "price": "7300",
+        "cost_price": "7300"
+      },
+      {
+        "id": "30",
+        "spu": "9288 Diamonds 💎",
+        "price": "12000",
+        "cost_price": "12000"
+      },
+      {
+        "id": "33",
+        "spu": "Twilight Pass",
+        "price": "33.00",
+        "cost_price": "33.00"
+      },
+      {
+        "id": "16642",
+        "spu": "Weekly Pass",
+        "price": "160",
+        "cost_price": "160"
+      }
+    ]
+  }
+}
